@@ -1,0 +1,28 @@
+inventory-service:
+        url: http://localhost:9999
+
+spring:
+    datasource:
+        password: mysql
+        url: jdbc:mysql://localhost:3306/order-service
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+    application:
+        name: order-service-test
+    cloud:
+        service-registry:
+            auto-registration:
+                enabled: false
+        loadbalancer:
+            ribbon:
+                enabled: false
+        config:
+            enabled: false
+
+eureka:
+    client:
+        enabled: false
+        service-url:
+            registerWithEureka: false
